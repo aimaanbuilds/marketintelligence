@@ -1,6 +1,7 @@
 from app.collectors.ddgs_collector import (
     DDGSCollector
 )
+from app.intelligence.analysis import analyze_market
 
 collector = DDGSCollector()
 
@@ -66,10 +67,19 @@ class AnalysisService:
                 item
             )
 
+            analysis = analyze_market(
+            unique_evidence
+        )
+
+        top_evidence = unique_evidence[:10]
+
         return {
             "topic": topic,
             "evidence_count": len(
                 unique_evidence
             ),
-            "evidence": unique_evidence
+            "market_pulse": analysis["market_pulse"],
+            "opportunities": analysis["opportunities"],
+            "threats": analysis["threats"],
+            "top_evidence": top_evidence
         }

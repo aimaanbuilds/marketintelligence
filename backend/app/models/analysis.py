@@ -1,6 +1,8 @@
-from pydantic import BaseModel
-from typing import List
 
+from pydantic import BaseModel
+from typing import List, Dict, Any
+
+from app.models.evidence import Evidence
 
 class Evidence(BaseModel):
     source: str
@@ -16,4 +18,11 @@ class AnalysisRequest(BaseModel):
 class AnalysisResponse(BaseModel):
     topic: str
     evidence_count: int
-    evidence: List[Evidence]
+
+    market_pulse: Dict[str, Any]
+
+    opportunities: List[Dict[str, Any]]
+
+    threats: List[Dict[str, Any]]
+
+    top_evidence: List[Evidence]
