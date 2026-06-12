@@ -1,11 +1,35 @@
 from ddgs import DDGS
 
 
+def is_relevant(
+    result,
+    topic
+):
+
+    text = (
+        result.get("title", "")
+        +
+        result.get("body", "")
+    ).lower()
+
+    topic_words = [
+        word
+        for word in topic.lower().split()
+        if len(word) > 2
+    ]
+
+    return any(
+        word in text
+        for word in topic_words
+    )
+
+
 class DDGSCollector:
 
     async def collect(
         self,
-        query: str
+        query: str,
+        topic: str
     ):
 
         try:
@@ -22,6 +46,12 @@ class DDGSCollector:
             normalized_results = []
 
             for result in results:
+
+                if not is_relevant(
+                    result,
+                    topic
+                ):
+                    continue
 
                 normalized_results.append(
                     {
@@ -51,3 +81,4 @@ class DDGSCollector:
             )
 
             return []
+        #comment
