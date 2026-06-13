@@ -1,25 +1,18 @@
-import asyncio
+# test_gemini.py
 
-from app.intelligence.gemini_analysis import (
-    analyze_with_gemini
+import os
+from google import genai
+from dotenv import load_dotenv
+
+load_dotenv()
+
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
 )
 
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="Give me 3 startup opportunities in the AI nutrition market."
+)
 
-async def main():
-
-    result = await analyze_with_gemini(
-        [
-            {
-                "title":
-                "Best shoes for flat feet",
-
-                "snippet":
-                "Many customers seek supportive footwear."
-            }
-        ]
-    )
-
-    print(result)
-
-
-asyncio.run(main())
+print(response.text)
