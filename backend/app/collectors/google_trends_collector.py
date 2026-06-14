@@ -25,25 +25,41 @@ class GoogleTrendsCollector:
             data = pytrends.interest_over_time()
 
             if data.empty:
-
                 return []
 
-            values = data[
-                topic
-            ].tolist()
+            values = data[topic].tolist()
 
-            latest = values[-1]
+            last_value = values[-1]
 
-            average = (
-                sum(values)
-                / len(values)
+            last_30_avg = (
+                sum(values[-30:])
+                /
+                min(30, len(values))
+            )
+
+            last_90_avg = (
+                sum(values[-90:])
+                /
+                min(90, len(values))
+            )
+
+            growth_rate = round(
+                (
+                    last_30_avg
+                    -
+                    last_90_avg
+                )
+                /
+                max(last_90_avg, 1)
+                * 100,
+                2
             )
 
             peak = max(values)
 
             trend = (
                 "rising"
-                if latest > average
+                if growth_rate > 0
                 else "falling"
             )
 
@@ -60,16 +76,23 @@ class GoogleTrendsCollector:
 
                     "snippet":
                     (
-                        f"Interest: {latest}, "
-                        f"Average: {average:.1f}, "
-                        f"Peak: {peak}"
+                        f"Interest: {last_value}, "
+                        f"30d Avg: {last_30_avg:.1f}, "
+                        f"90d Avg: {last_90_avg:.1f}, "
+                        f"Growth: {growth_rate}%"
                     ),
 
                     "interest":
-                    latest,
+                    last_value,
 
-                    "average_interest":
-                    average,
+                    "last_30_avg":
+                    round(last_30_avg, 1),
+
+                    "last_90_avg":
+                    round(last_90_avg, 1),
+
+                    "growth_rate":
+                    growth_rate,
 
                     "peak_interest":
                     peak,

@@ -1,9 +1,10 @@
+# test_youtube_v2.py
+
 import asyncio
 
 from app.collectors.youtube_collector import (
     YouTubeCollector
 )
-
 
 async def main():
 
@@ -15,41 +16,36 @@ async def main():
 
     print()
 
-    for item in results:
+    print(
+        "RESULTS:",
+        len(results)
+    )
+
+    print()
+
+    for item in results[:3]:
 
         print("=" * 60)
 
+        print("TITLE:", item["title"])
+
+        print("VIEWS:", item["views"])
+
+        print("LIKES:", item["likes"])
+
+        print("COMMENTS:", item["comments"])
+
+        print("AGE DAYS:", item["age_days"])
+
         print(
-            item["title"]
+            "VIEWS/DAY:",
+            item["views_per_day"]
         )
 
         print(
-            "Views:",
-            item["views"]
-        )
-
-        print(
-            "Likes:",
-            item["likes"]
-        )
-
-        print(
-            "Comments:",
-            item["comments"]
-        )
-
-        print(
-            "Channel:",
-            item["channel"]
-        )
-
-        print(
-            "Published:",
-            item["published"]
-        )
-
-        print(
-            item["url"]
+            "ENGAGEMENT RATE:",
+            item["engagement_rate"],
+            "%"
         )
 
         print()

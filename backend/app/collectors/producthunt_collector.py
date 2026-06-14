@@ -4,6 +4,7 @@ import os
 import requests
 
 from dotenv import load_dotenv
+from datetime import datetime, timezone
 
 load_dotenv()
 
@@ -98,23 +99,71 @@ class ProductHuntCollector:
                     in node["topics"]["edges"]
                 ]
 
+                launch_date = node["createdAt"]
+
+                launch_dt = datetime.fromisoformat(
+                    launch_date.replace(
+                        "Z",
+                        "+00:00"
+                    )
+                )
+
+                age_days = max(
+                    1,
+                    (
+                        datetime.now(timezone.utc)
+                        -
+                        launch_dt
+                    ).days
+                )
+
+                votes = node["votesCount"]
+                comments = node["commentsCount"]
+
+                votes_per_day = round(
+                    votes / age_days,
+                    2
+                )
+
+                comments_per_day = round(
+                    comments / age_days,
+                    2
+                )
+
                 results.append(
                     {
-                        "source": "producthunt",
+                        "source":
+                        "producthunt",
 
-                        "title": node["name"],
+                        "title":
+                        node["name"],
 
-                        "url": node["url"],
+                        "url":
+                        node["url"],
 
-                        "snippet": node["tagline"],
+                        "snippet":
+                        node["tagline"],
 
-                        "votes": node["votesCount"],
+                        "votes":
+                        votes,
 
-                        "comments": node["commentsCount"],
+                        "comments":
+                        comments,
 
-                        "launch_date": node["createdAt"],
+                        "launch_date":
+                        launch_date,
 
-                        "topics": topics
+                        "age_days":
+                        age_days,
+
+                        "votes_per_day":
+                        votes_per_day,
+
+                        "comments_per_day":
+                        comments_per_day,
+
+                        "topics":
+                        topics
                     }
                 )
 
