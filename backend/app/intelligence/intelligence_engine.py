@@ -1,9 +1,5 @@
 # app/intelligence/intelligence_engine.py
 
-from concurrent.futures import (
-    ThreadPoolExecutor
-)
-
 from app.intelligence.customer_intelligence import (
     extract_customer_intelligence
 )
@@ -24,33 +20,27 @@ def build_intelligence(
     known_competitors=None
 ):
 
-   customer = extract_customer_intelligence(
-    topic,
-    evidence,
-    signals
-)
+    customer = extract_customer_intelligence(
+        topic,
+        evidence,
+        signals
+    )
 
-market = extract_market_intelligence(
-    topic,
-    evidence,
-    signals
-)
+    market = extract_market_intelligence(
+        topic,
+        evidence,
+        signals
+    )
 
-competitive = extract_competitive_intelligence(
-    topic,
-    evidence,
-    signals,
-    known_competitors
-)
+    competitive = extract_competitive_intelligence(
+        topic,
+        evidence,
+        signals,
+        known_competitors
+    )
 
     return {
-
-        "customer":
-        customer,
-
-        "market":
-        market,
-
-        "competitive":
-        competitive
+        "customer": customer,
+        "market": market,
+        "competitive": competitive
     }
