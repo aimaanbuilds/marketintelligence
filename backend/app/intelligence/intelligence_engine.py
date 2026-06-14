@@ -24,49 +24,24 @@ def build_intelligence(
     known_competitors=None
 ):
 
-    with ThreadPoolExecutor(
-        max_workers=3
-    ) as executor:
+   customer = extract_customer_intelligence(
+    topic,
+    evidence,
+    signals
+)
 
-        customer_future = (
-            executor.submit(
-                extract_customer_intelligence,
-                topic,
-                evidence,
-                signals
-            )
-        )
+market = extract_market_intelligence(
+    topic,
+    evidence,
+    signals
+)
 
-        market_future = (
-            executor.submit(
-                extract_market_intelligence,
-                topic,
-                evidence,
-                signals
-            )
-        )
-
-        competitive_future = (
-            executor.submit(
-                extract_competitive_intelligence,
-                topic,
-                evidence,
-                signals,
-                known_competitors
-            )
-        )
-
-        customer = (
-            customer_future.result()
-        )
-
-        market = (
-            market_future.result()
-        )
-
-        competitive = (
-            competitive_future.result()
-        )
+competitive = extract_competitive_intelligence(
+    topic,
+    evidence,
+    signals,
+    known_competitors
+)
 
     return {
 
