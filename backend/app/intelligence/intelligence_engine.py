@@ -1,5 +1,3 @@
-# app/intelligence/intelligence_engine.py
-
 from app.intelligence.customer_intelligence import (
     extract_customer_intelligence
 )
@@ -20,27 +18,72 @@ def build_intelligence(
     known_competitors=None
 ):
 
-    customer = extract_customer_intelligence(
-        topic,
-        evidence,
-        signals
-    )
+    try:
 
-    market = extract_market_intelligence(
-        topic,
-        evidence,
-        signals
-    )
+        customer = (
+            extract_customer_intelligence(
+                topic,
+                evidence,
+                signals
+            )
+        )
 
-    competitive = extract_competitive_intelligence(
-        topic,
-        evidence,
-        signals,
-        known_competitors
-    )
+    except Exception as e:
+
+        print(
+            "\nCUSTOMER INTELLIGENCE FAILED:\n",
+            e
+        )
+
+        customer = {}
+
+    try:
+
+        market = (
+            extract_market_intelligence(
+                topic,
+                evidence,
+                signals
+            )
+        )
+
+    except Exception as e:
+
+        print(
+            "\nMARKET INTELLIGENCE FAILED:\n",
+            e
+        )
+
+        market = {}
+
+    try:
+
+        competitive = (
+            extract_competitive_intelligence(
+                topic,
+                evidence,
+                signals,
+                known_competitors
+            )
+        )
+
+    except Exception as e:
+
+        print(
+            "\nCOMPETITIVE INTELLIGENCE FAILED:\n",
+            e
+        )
+
+        competitive = {}
 
     return {
-        "customer": customer,
-        "market": market,
-        "competitive": competitive
+
+        "customer":
+        customer,
+
+        "market":
+        market,
+
+        "competitive":
+        competitive
     }

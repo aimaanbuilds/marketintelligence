@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 import requests
 
 from dotenv import load_dotenv
@@ -37,44 +38,72 @@ class OpenRouterService:
             self.default_model
         )
 
-        response = requests.post(
+        headers = {
 
-            self.url,
+            "Authorization":
+            f"Bearer {self.api_key}",
 
-            timeout=60,
+            "Content-Type":
+            "application/json",
 
-            headers={
+            "HTTP-Referer":
+            "http://localhost",
 
-                "Authorization":
-                f"Bearer {self.api_key}",
+            "X-Title":
+            "Signal"
+        }
 
-                "Content-Type":
-                "application/json",
+        payload = {
 
-                "HTTP-Referer":
-                "http://localhost",
+            "model":
+            model,
 
-                "X-Title":
-                "Signal"
-            },
+            "messages": [
 
-            json={
+                {
+                    "role":
+                    "user",
 
-                "model":
-                model,
+                    "content":
+                    prompt
+                }
+            ]
+        }
 
-                "messages": [
+        response = None
 
-                    {
-                        "role":
-                        "user",
+        for attempt in range(3):
 
-                        "content":
-                        prompt
-                    }
-                ]
-            }
-        )
+            response = requests.post(
+
+                self.url,
+
+                timeout=60,
+
+                headers=headers,
+
+                json=payload
+            )
+
+            if response.status_code == 429:
+
+                wait_time = (
+                    5 * (attempt + 1)
+                )
+
+                print(
+                    f"\nOPENROUTER RATE LIMITED "
+                    f"(attempt {attempt + 1}/3). "
+                    f"Retrying in {wait_time}s..."
+                )
+
+                time.sleep(
+                    wait_time
+                )
+
+                continue
+
+            break
 
         if debug:
 
@@ -119,24 +148,7 @@ class OpenRouterService:
 
         except Exception:
 
-            match = re.search(
-                r"\{.*\}",
-                response_text,
-                re.DOTALL
-            )
-
-            if not match:
-
-                print("\nRAW RESPONSE:")
-                print(response_text)
-
-                raise Exception(
-                    "No JSON found in model response"
-                )
-
-            return json.loads(
-                match.group()
-            )
+            pass
 
         match = re.search(
             r"\{.*\}",
@@ -146,13 +158,49 @@ class OpenRouterService:
 
         if not match:
 
-            print("\nRAW RESPONSE:")
-            print(response_text)
-
-            raise Exception(
-                "No JSON found in model response"
+            print(
+                "\nRAW MODEL RESPONSE:\n"
             )
 
-        return json.loads(
-            match.group()
-        )
+            print(
+                response_text
+            )
+
+            return {
+
+                "error":
+                "no_json",
+
+                "raw_response":
+                response_text
+            }
+
+        try:
+
+            return json.loads(
+                match.group()
+            )
+
+        except Exception as e:
+
+            print(
+                "\nINVALID JSON FROM MODEL:\n"
+            )
+
+            print(
+                match.group()
+            )
+
+            print(
+                "\nJSON ERROR:\n",
+                str(e)
+            )
+
+            return {
+
+                "error":
+                "invalid_json",
+
+                "raw_response":
+                match.group()
+            }
