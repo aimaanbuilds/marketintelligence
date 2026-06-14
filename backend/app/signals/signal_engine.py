@@ -18,6 +18,10 @@ from app.signals.market_size_signals import (
     extract as market_size
 )
 
+from app.signals.market_opportunity_signals import (
+    extract as market_opportunity
+)
+
 
 def build_signals(
     evidence
@@ -42,6 +46,11 @@ def build_signals(
 
         "customer":
         customer(
+            evidence
+        ),
+        
+        "market_opportunity":
+        market_opportunity(
             evidence
         ),
 
