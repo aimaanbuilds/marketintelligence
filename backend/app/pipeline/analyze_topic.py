@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 
 from app.services.cache_service import (
     CacheService
@@ -29,6 +30,10 @@ def analyze_topic(
         print(
             "\nCACHE HIT\n"
         )
+
+        if "meta" in cached:
+
+            cached["meta"]["cached"] = True
 
         return cached
 
@@ -99,6 +104,15 @@ def analyze_topic(
     result = {
 
         "meta": {
+
+            "topic":
+            topic,
+
+            "cached":
+            False,
+
+            "generated_at":
+            datetime.utcnow().isoformat(),
 
             "intelligence_time":
             intelligence_time,

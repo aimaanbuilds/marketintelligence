@@ -1,7 +1,15 @@
 from app.collectors.ddgs_collector import (
     DDGSCollector
 )
-from app.intelligence.analysis import analyze_market
+
+from app.signals.signal_engine import (
+    build_signals
+)
+
+from app.pipeline.analyze_topic import (
+    analyze_topic
+)
+
 
 collector = DDGSCollector()
 
@@ -12,6 +20,10 @@ class AnalysisService:
         self,
         topic: str
     ):
+
+        print(
+            "\nSTEP 1: START COLLECTION"
+        )
 
         queries = [
 
@@ -45,10 +57,16 @@ class AnalysisService:
                 topic
             )
 
-            evidence.extend(results)
+            evidence.extend(
+                results
+            )
 
-        # Remove duplicate URLs
+        print(
+            "\nSTEP 2: COLLECTION COMPLETE"
+        )
+
         unique_evidence = []
+
         seen_urls = set()
 
         for item in evidence:
@@ -61,25 +79,47 @@ class AnalysisService:
             if url in seen_urls:
                 continue
 
-            seen_urls.add(url)
+            seen_urls.add(
+                url
+            )
 
             unique_evidence.append(
                 item
             )
 
-            analysis = analyze_market(
+        print(
+            "\nSTEP 3: UNIQUE EVIDENCE:",
+            len(unique_evidence)
+        )
+
+        signals = build_signals(
             unique_evidence
         )
 
-        top_evidence = unique_evidence[:10]
+        print(
+            "\nSTEP 4: SIGNALS BUILT"
+        )
 
-        return {
-            "topic": topic,
-            "evidence_count": len(
-                unique_evidence
-            ),
-            "market_pulse": analysis["market_pulse"],
-            "opportunities": analysis["opportunities"],
-            "threats": analysis["threats"],
-            "top_evidence": top_evidence
-        }
+        known_competitors = []
+
+        print(
+            "\nSTEP 5: RUNNING PIPELINE"
+        )
+
+        result = analyze_topic(
+
+            topic=topic,
+
+            evidence=unique_evidence,
+
+            signals=signals,
+
+            known_competitors=
+            known_competitors
+        )
+
+        print(
+            "\nSTEP 6: PIPELINE COMPLETE"
+        )
+
+        return result

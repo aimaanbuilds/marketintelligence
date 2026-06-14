@@ -1,8 +1,12 @@
-from fastapi import APIRouter
+from fastapi import (
+    APIRouter,
+    HTTPException
+)
+
+import traceback
 
 from app.models.analysis import (
-    AnalysisRequest,
-    AnalysisResponse
+    AnalysisRequest
 )
 
 from app.services.analysis_service import (
@@ -14,16 +18,22 @@ router = APIRouter()
 service = AnalysisService()
 
 
-@router.post(
-    "/analyze",
-    response_model=AnalysisResponse
-)
+@router.post("/analyze")
 async def analyze(
     request: AnalysisRequest
 ):
 
-    result = await service.analyze(
-        request.topic
-    )
+    try:
 
-    return result
+        return await service.analyze(
+            request.topic
+        )
+
+    except Exception as e:
+
+        traceback.print_exc()
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )

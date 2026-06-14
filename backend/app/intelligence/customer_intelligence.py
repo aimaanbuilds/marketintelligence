@@ -44,6 +44,29 @@ An observable behavior, habit, or decision-making pattern.
 Opportunity Area:
 An underserved customer need, emerging trend, or market gap.
 
+Customer segments MUST:
+
+- Be actual groups of people.
+- Never be market concepts.
+- Never be trends.
+- Never be opportunity areas.
+- Be written as buyer personas.
+
+BAD:
+- Market Opportunity
+- AI Trend
+- Growth Segment
+
+GOOD:
+- Weight-loss seekers
+- Busy professionals
+- Fitness enthusiasts
+- People replacing dietitians with AI
+
+For every segment ask:
+"Would this describe a real person?"
+If not, reject it.
+
 Rules:
 
 - Base conclusions ONLY on provided evidence.
@@ -60,10 +83,14 @@ Rules:
 Schema:
 
 {{
-  "customer_segments": [
+    "customer_segments": [
     {{
-      "name": "",
-      "importance": 0
+     "name": "Weight-loss seekers",
+     "score": 95
+  }},
+  {{
+      "name": "Busy professionals",
+      "score": 80
     }}
   ],
 

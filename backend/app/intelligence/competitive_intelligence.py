@@ -51,7 +51,7 @@ Your job is to identify:
 4. White space opportunities
 5. Differentiation opportunities
 
-
+ 
 
 Definitions:
 
@@ -82,6 +82,7 @@ Rules:
 - Rank strongest insights first.
 - Scores must be between 0 and 100.
 - Return ONLY valid JSON.
+-Ignore evidence that solves a fundamentally different problem than the topic.
 
 Schema:
 

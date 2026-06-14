@@ -126,6 +126,10 @@ Rules:
 - Confidence must be between 0 and 95.
 - Opportunity scores above 90 should be extremely rare.
 - Return ONLY valid JSON.
+- Every recommendation MUST be supported by intelligence.
+- Never invent a customer segment.
+- Use the highest scoring customer segment when recommending customers.
+- If evidence strongly indicates weight loss, prefer weight-loss seekers.
 
 CRITICAL:
 
@@ -193,6 +197,7 @@ Build Recommendation must be one of:
 - Yes
 - Monitor
 - No
+
 
 Schema:
 
