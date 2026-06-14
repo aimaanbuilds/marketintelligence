@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-06-14T20:55:30.538450",
+  "result": {
+    "meta": {
+      "topic": "shoes for flat feet",
+      "cached": false,
+      "generated_at": "2026-06-14T20:55:30.538328",
+      "intelligence_time": 35.26,
+      "synthesis_time": 32.46,
+      "total_time": 67.72
+    },
+    "signals": {
+      "virality": {
+        "momentum": 0,
+        "trend_growth": 0,
+        "avg_views_per_day": 0,
+        "avg_engagement_rate": 0
+      },
+      "competitive": {
+        "launches": 0,
+        "avg_votes_per_day": 0,
+        "competition_score": 0
+      },
+      "market": {
+        "growth_score": 0,
+        "startup_activity": 0
+      },
+      "customer": {
+        "discussion_volume": 92,
+        "comment_volume": 0
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 0
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 20,
+      "opportunity_score": 0,
+      "build_recommendation": {
+        "decision": "No",
+        "reason": "Explicit zero market opportunity score detected, indicating a weak market."
+      },
+      "confidence": 30,
+      "confidence_explanation": "Confidence is low due to severe data scarcity, with no market size, growth, or competitive intelligence provided. The explicit zero opportunity score further limits confidence in market viability.",
+      "top_reason_to_build": "N/A - Market opportunity is explicitly zero.",
+      "biggest_risk": "Undetermined market viability and critical data gaps.",
+      "best_customer_segment": null,
+      "best_moat": "N/A - Market viability is unconfirmed.",
+      "executive_summary": "The market for shoes for flat feet, despite some customer discussion, registers an explicit zero market opportunity score. Significant data gaps in market size, growth, and competition indicate a weak and unvalidated market for startup entry.",
+      "why_now": [
+        {
+          "title": "Limited Customer Discussion",
+          "evidence": "customer.discussion_volume: 92",
+          "reason": "Some online conversation around the topic exists."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Potential Niche Demand",
+          "evidence": "customer.discussion_volume: 92",
+          "reason": "Customer discussion suggests an underlying need might exist."
+        },
+        {
+          "title": "Undefined Competitive Landscape",
+          "evidence": "top_competitors: []",
+          "reason": "Lack of competitor data could suggest an open field."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Zero Market Opportunity",
+          "evidence": "market_opportunity.opportunity_score: 0",
+          "reason": "Direct signal indicating a non-viable market opportunity."
+        },
+        {
+          "title": "Missing Market Data",
+          "evidence": "market_size: {}, growth_rate: {}",
+          "reason": "Lack of size, growth, and trend data hinders validation."
+        },
+        {
+          "title": "Unidentified Pain Points",
+          "evidence": "top_pain_points: []",
+          "reason": "Product-market fit cannot be determined without clear problems."
+        }
+      ],
+      "recommended_customer": null,
+      "recommended_positioning": "N/A - Insufficient market validation to define positioning.",
+      "potential_moats": [],
+      "execution_ideas": []
+    }
+  }
+}

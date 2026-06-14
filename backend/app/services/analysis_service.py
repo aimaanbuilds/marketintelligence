@@ -2,6 +2,18 @@ from app.collectors.ddgs_collector import (
     DDGSCollector
 )
 
+from app.collectors.youtube_collector import (
+    YouTubeCollector
+)
+
+from app.collectors.google_trends_collector import (
+    GoogleTrendsCollector
+)
+
+from app.collectors.producthunt_collector import (
+    ProductHuntCollector
+)
+
 from app.signals.signal_engine import (
     build_signals
 )
@@ -11,7 +23,17 @@ from app.pipeline.analyze_topic import (
 )
 
 
-collector = DDGSCollector()
+ddgs = DDGSCollector()
+
+youtube = YouTubeCollector()
+
+google_trends = (
+    GoogleTrendsCollector()
+)
+
+producthunt = (
+    ProductHuntCollector()
+)
 
 
 class AnalysisService:
@@ -25,34 +47,34 @@ class AnalysisService:
             "\nSTEP 1: START COLLECTION"
         )
 
+        evidence = []
+
+        #
+        # DDGS
+        #
+
         queries = [
 
-            # Competition
             f"{topic} competitors",
             f"{topic} alternatives",
 
-            # Customer sentiment
             f"{topic} customer complaints",
             f"{topic} reviews",
             f"{topic} complaints",
 
-            # Market intelligence
             f"{topic} funding",
             f"{topic} startup launches",
             f"{topic} market trends",
             f"{topic} pricing",
             f"{topic} growth",
 
-            # Community discussions
             f"site:reddit.com {topic}",
             f"site:youtube.com {topic}"
         ]
 
-        evidence = []
-
         for query in queries:
 
-            results = await collector.collect(
+            results = await ddgs.collect(
                 query,
                 topic
             )
@@ -60,6 +82,64 @@ class AnalysisService:
             evidence.extend(
                 results
             )
+
+        print(
+            f"DDGS RESULTS: {len(evidence)}"
+        )
+
+        #
+        # YouTube
+        #
+
+        youtube_results = (
+            await youtube.collect(
+                topic
+            )
+        )
+
+        evidence.extend(
+            youtube_results
+        )
+
+        print(
+            f"YOUTUBE RESULTS: {len(youtube_results)}"
+        )
+
+        #
+        # Google Trends
+        #
+
+        trends_results = (
+            await google_trends.collect(
+                topic
+            )
+        )
+
+        evidence.extend(
+            trends_results
+        )
+
+        print(
+            f"GOOGLE TRENDS RESULTS: {len(trends_results)}"
+        )
+
+        #
+        # Product Hunt
+        #
+
+        producthunt_results = (
+            await producthunt.collect(
+                topic
+            )
+        )
+
+        evidence.extend(
+            producthunt_results
+        )
+
+        print(
+            f"PRODUCT HUNT RESULTS: {len(producthunt_results)}"
+        )
 
         print(
             "\nSTEP 2: COLLECTION COMPLETE"
@@ -76,12 +156,13 @@ class AnalysisService:
                 ""
             )
 
-            if url in seen_urls:
+            if url and url in seen_urls:
                 continue
 
-            seen_urls.add(
-                url
-            )
+            if url:
+                seen_urls.add(
+                    url
+                )
 
             unique_evidence.append(
                 item
@@ -90,6 +171,35 @@ class AnalysisService:
         print(
             "\nSTEP 3: UNIQUE EVIDENCE:",
             len(unique_evidence)
+        )
+
+        #
+        # Debug source breakdown
+        #
+
+        sources = {}
+
+        for item in unique_evidence:
+
+            source = item.get(
+                "source",
+                "unknown"
+            )
+
+            sources[source] = (
+                sources.get(
+                    source,
+                    0
+                )
+                + 1
+            )
+
+        print(
+            "\nSOURCE BREAKDOWN:"
+        )
+
+        print(
+            sources
         )
 
         signals = build_signals(

@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-06-14T22:33:22.394778",
+  "result": {
+    "meta": {
+      "topic": "sustainable notebooks",
+      "cached": false,
+      "generated_at": "2026-06-14T22:33:22.394749",
+      "intelligence_time": 34.12,
+      "synthesis_time": 26.16,
+      "total_time": 60.28
+    },
+    "signals": {
+      "virality": {
+        "momentum": 33,
+        "trend_growth": 67.13,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 85.5,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 67.13,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 121,
+        "comment_volume": 2956
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 6
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 70,
+      "opportunity_score": 72,
+      "build_recommendation": {
+        "decision": "Yes",
+        "reason": "Strong customer interest and market growth signal demand despite high competition."
+      },
+      "confidence": 65,
+      "confidence_explanation": "Confidence is moderate due to strong quantitative signals for demand and growth, but limited qualitative data on specific pain points, segments, or white space, alongside high competition.",
+      "top_reason_to_build": "Significant customer discussion volume indicates a receptive and engaged audience.",
+      "biggest_risk": "Intense competition score of 100 makes market entry challenging without clear differentiation.",
+      "best_customer_segment": null,
+      "best_moat": "Brand and Community",
+      "executive_summary": "The sustainable notebooks market shows promising customer engagement and growth, yet faces intense competition. A startup could enter by leveraging deep customer insights to carve out a differentiated niche. Success hinges on a robust differentiation strategy and effective moat building.",
+      "why_now": [
+        {
+          "title": "Growing Market",
+          "evidence": "market.growth_score 67.13",
+          "reason": "The market demonstrates a solid growth trajectory, signaling increasing demand."
+        },
+        {
+          "title": "High Customer Engagement",
+          "evidence": "customer.comment_volume 2956",
+          "reason": "A large volume of customer comments indicates strong interest and potential for advocacy."
+        },
+        {
+          "title": "Positive Trend Growth",
+          "evidence": "virality.trend_growth 67.13",
+          "reason": "The topic is experiencing significant trend growth, suggesting rising awareness."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Deep Customer Insights",
+          "evidence": "customer.comment_volume 2956",
+          "reason": "Leverage extensive customer comments to uncover unmet needs and product improvements."
+        },
+        {
+          "title": "Market Expansion",
+          "evidence": "market.growth_score 67.13",
+          "reason": "Capitalize on the growing market by introducing innovative sustainable notebook solutions."
+        },
+        {
+          "title": "Community Building",
+          "evidence": "customer.discussion_volume 121",
+          "reason": "Engaged customer discussions offer a foundation for building a loyal brand community."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Intense Competition",
+          "evidence": "competitive.competition_score 100",
+          "reason": "The market is highly saturated, making it difficult to establish a unique position."
+        },
+        {
+          "title": "Lack of Clear Differentiation",
+          "evidence": "top_differentiators [] (empty)",
+          "reason": "Absence of identified differentiators makes it challenging to stand out effectively."
+        },
+        {
+          "title": "Limited Organic Virality",
+          "evidence": "virality.avg_views_per_day 0.0",
+          "reason": "Low organic virality suggests significant marketing investment may be required."
+        }
+      ],
+      "recommended_customer": null,
+      "recommended_positioning": null,
+      "potential_moats": [
+        {
+          "title": "Brand and Community",
+          "evidence": "customer.comment_volume 2956",
+          "reason": "Cultivating an engaged customer base can foster strong loyalty and advocacy."
+        },
+        {
+          "title": "Proprietary Insights",
+          "evidence": "customer.discussion_volume 121",
+          "reason": "Deep analysis of customer interactions can lead to unique, data-driven product features."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Community-Driven Product Development",
+          "reason": "Utilize active customer discussions and comments to guide product design and features."
+        },
+        {
+          "title": "Niche-Specific Sustainability Focus",
+          "reason": "Address a highly specific sustainable material or production process to differentiate in crowded market."
+        },
+        {
+          "title": "Strategic Partnerships for Distribution",
+          "reason": "Form alliances with eco-conscious brands or retailers to expand market reach efficiently."
+        }
+      ]
+    }
+  }
+}

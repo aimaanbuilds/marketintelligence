@@ -18,72 +18,38 @@ def build_intelligence(
     known_competitors=None
 ):
 
-    try:
+    print("\nBUILD_INTELLIGENCE START")
 
-        customer = (
-            extract_customer_intelligence(
-                topic,
-                evidence,
-                signals
-            )
-        )
+    customer = extract_customer_intelligence(
+        topic,
+        evidence,
+        signals
+    )
 
-    except Exception as e:
+    print("\nCUSTOMER:")
+    print(customer)
 
-        print(
-            "\nCUSTOMER INTELLIGENCE FAILED:\n",
-            e
-        )
+    market = extract_market_intelligence(
+        topic,
+        evidence,
+        signals
+    )
 
-        customer = {}
+    print("\nMARKET:")
+    print(market)
 
-    try:
+    competitive = extract_competitive_intelligence(
+        topic,
+        evidence,
+        signals,
+        known_competitors or []
+    )
 
-        market = (
-            extract_market_intelligence(
-                topic,
-                evidence,
-                signals
-            )
-        )
-
-    except Exception as e:
-
-        print(
-            "\nMARKET INTELLIGENCE FAILED:\n",
-            e
-        )
-
-        market = {}
-
-    try:
-
-        competitive = (
-            extract_competitive_intelligence(
-                topic,
-                evidence,
-                signals,
-                known_competitors
-            )
-        )
-
-    except Exception as e:
-
-        print(
-            "\nCOMPETITIVE INTELLIGENCE FAILED:\n",
-            e
-        )
-
-        competitive = {}
+    print("\nCOMPETITIVE:")
+    print(competitive)
 
     return {
-
-        "customer":
-        customer,
-
-        "market":
-        market,
-
-        "competitive":
-        competitive
+        "customer": customer,
+        "market": market,
+        "competitive": competitive
     }

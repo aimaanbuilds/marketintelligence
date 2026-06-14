@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 from datetime import datetime, timezone
 import os
 
+print("LOADING:", __file__)
+
 
 load_dotenv()
 
@@ -67,6 +69,8 @@ class YouTubeCollector:
                     "snippet",
                     {}
                 )
+
+            
 
                 results.append(
                     {
@@ -138,26 +142,3 @@ class YouTubeCollector:
             return []
         
 
-published_dt = datetime.fromisoformat(
-    published.replace("Z", "+00:00")
-)
-
-age_days = max(
-    1,
-    (datetime.now(timezone.utc) - published_dt).days
-)
-
-views_per_day = round(
-    views / age_days,
-    2
-)
-
-engagement_rate = round(
-    (
-        likes + comments
-    )
-    /
-    max(views, 1)
-    * 100,
-    2
-)

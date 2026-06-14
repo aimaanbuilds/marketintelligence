@@ -1,0 +1,314 @@
+{
+  "timestamp": "2026-06-14T21:16:41.347715",
+  "result": {
+    "meta": {
+      "topic": "flat foot running shoes",
+      "cached": false,
+      "generated_at": "2026-06-14T21:16:41.347468",
+      "intelligence_time": 64.04,
+      "synthesis_time": 17.28,
+      "total_time": 81.31
+    },
+    "signals": {
+      "virality": {
+        "momentum": 0,
+        "trend_growth": 0,
+        "avg_views_per_day": 0,
+        "avg_engagement_rate": 0
+      },
+      "competitive": {
+        "launches": 0,
+        "avg_votes_per_day": 0,
+        "competition_score": 0
+      },
+      "market": {
+        "growth_score": 0,
+        "startup_activity": 0
+      },
+      "customer": {
+        "discussion_volume": 101,
+        "comment_volume": 0
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 1
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {
+        "market_size": {
+          "estimate": "500,000,000",
+          "confidence": 50
+        },
+        "growth_rate": {
+          "estimate": "3%",
+          "confidence": 50
+        },
+        "market_maturity": {
+          "stage": "Growth",
+          "confidence": 75
+        },
+        "future_outlook": {
+          "direction": "Positive",
+          "confidence": 75
+        },
+        "key_trends": [
+          {
+            "name": "Support/Stability for Flat Feet",
+            "strength": 90
+          },
+          {
+            "name": "Specialized Footwear Design",
+            "strength": 85
+          },
+          {
+            "name": "Comfort as Primary Feature",
+            "strength": 80
+          }
+        ],
+        "emerging_trends": [
+          {
+            "name": "Minimalist Shoe Technology",
+            "potential": 70
+          },
+          {
+            "name": "Focus on Heel Counter Design",
+            "potential": 65
+          }
+        ],
+        "market_drivers": [
+          {
+            "name": "Increased Awareness of Flat Foot Issues",
+            "impact": 80
+          },
+          {
+            "name": "Growing Demand for Functional Running Shoes",
+            "impact": 75
+          }
+        ]
+      },
+      "competitive": {
+        "competitors": [
+          {
+            "name": "adidas Running",
+            "strength": 40
+          },
+          {
+            "name": "ASICS Gel-Kayano / Gel-Nimbus",
+            "strength": 35
+          },
+          {
+            "name": "Brooks Running",
+            "strength": 25
+          },
+          {
+            "name": "Saucony",
+            "strength": 25
+          },
+          {
+            "name": "ON Running",
+            "strength": 20
+          }
+        ],
+        "competitive_threats": [
+          {
+            "name": "Established support-focused running brands",
+            "severity": 45
+          },
+          {
+            "name": "Multi-brand specialty retailers",
+            "severity": 40
+          },
+          {
+            "name": "Flat-foot buying-guide content",
+            "severity": 35
+          },
+          {
+            "name": "Transparent shoe-testing publishers",
+            "severity": 30
+          },
+          {
+            "name": "Recognized stability shoe models",
+            "severity": 25
+          }
+        ],
+        "positioning_gaps": [
+          {
+            "name": "Flat-foot-specific support proof",
+            "opportunity": 80
+          },
+          {
+            "name": "Wide feet plus flat feet overlap",
+            "opportunity": 70
+          },
+          {
+            "name": "Transparent stability testing",
+            "opportunity": 65
+          },
+          {
+            "name": "Multi-distance flat-foot use cases",
+            "opportunity": 60
+          },
+          {
+            "name": "Expert flat-foot buying guidance",
+            "opportunity": 50
+          }
+        ],
+        "white_space_opportunities": [
+          {
+            "name": "Wide flat-foot running shoes",
+            "score": 70
+          },
+          {
+            "name": "Verified flat-foot stability shoes",
+            "score": 65
+          },
+          {
+            "name": "Lab-tested support education",
+            "score": 60
+          },
+          {
+            "name": "Multi-surface flat-foot trainers",
+            "score": 55
+          },
+          {
+            "name": "Race-to-training flat-foot shoes",
+            "score": 50
+          }
+        ],
+        "differentiation_opportunities": [
+          {
+            "name": "Flat-foot-specific support claim",
+            "score": 85
+          },
+          {
+            "name": "Publish midsole and heel-counter data",
+            "score": 80
+          },
+          {
+            "name": "Wide-fit sizing compatibility",
+            "score": 70
+          },
+          {
+            "name": "Multi-distance versatility",
+            "score": 60
+          },
+          {
+            "name": "Expert-led flat-foot content",
+            "score": 50
+          }
+        ]
+      }
+    },
+    "synthesis": {
+      "market_pulse": 72,
+      "opportunity_score": 85,
+      "build_recommendation": {
+        "decision": "Strong Yes",
+        "reason": "Clear positioning gaps and specific differentiation opportunities exist within a growing market."
+      },
+      "confidence": 62,
+      "confidence_explanation": "Market maturity and future outlook show high confidence, but market size and growth rate estimates have moderate confidence.",
+      "top_reason_to_build": "Significant white space exists for verified, flat-foot specific support.",
+      "biggest_risk": "Established competitors dominate, requiring clear differentiation proof.",
+      "best_customer_segment": "Wide feet plus flat feet overlap",
+      "best_moat": "Proprietary lab-tested support data and wide-fit expertise.",
+      "executive_summary": "The flat foot running shoe market is in a growth stage with a positive outlook and clear customer demand. Significant opportunities exist for a startup to differentiate through verifiable, specific support for flat feet. A targeted entry with strong evidence-based claims could capture substantial market share.",
+      "why_now": [
+        {
+          "title": "Growing Market Maturity",
+          "evidence": "Market maturity: Growth, confidence: 75",
+          "reason": "The market is expanding, indicating increasing demand and openness to new solutions."
+        },
+        {
+          "title": "Positive Future Outlook",
+          "evidence": "Future outlook: Positive, confidence: 75",
+          "reason": "Consumer interest and demand for specialized footwear are projected to continue rising."
+        },
+        {
+          "title": "High Customer Discussion",
+          "evidence": "Customer discussion volume: 101",
+          "reason": "Active customer conversations suggest unmet needs and readiness for better solutions."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Verify Flat-Foot Support",
+          "evidence": "Flat-foot-specific support proof (80)",
+          "reason": "Establishing scientific proof for support creates a strong competitive advantage."
+        },
+        {
+          "title": "Address Wide Flat Feet",
+          "evidence": "Wide feet plus flat feet overlap (70)",
+          "reason": "A significant underserved segment exists for wider shoes designed for flat feet."
+        },
+        {
+          "title": "Provide Transparency",
+          "evidence": "Transparent stability testing (65)",
+          "reason": "Openly sharing test data builds trust and differentiates from competitors."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Strong Incumbent Competition",
+          "evidence": "adidas Running (40), ASICS (35), Brooks Running (25)",
+          "reason": "Established brands have significant market presence and brand loyalty."
+        },
+        {
+          "title": "Market Data Uncertainty",
+          "evidence": "Market size confidence: 50, Growth rate confidence: 50",
+          "reason": "Estimates for market size and growth rate have moderate confidence, posing investment risk."
+        },
+        {
+          "title": "Education Required",
+          "evidence": "Lab-tested support education (60)",
+          "reason": "Consumers may need education to understand the value of advanced support."
+        }
+      ],
+      "recommended_customer": "Wide feet plus flat feet overlap",
+      "recommended_positioning": "Position as the definitive, lab-verified leader in flat-foot-specific running shoe stability, especially catering to wide feet.",
+      "potential_moats": [
+        {
+          "title": "Proprietary Support Data",
+          "evidence": "Publish midsole and heel-counter data (80)",
+          "reason": "Exclusive research and published data can establish a unique knowledge base."
+        },
+        {
+          "title": "Verified Stability Claims",
+          "evidence": "Verified flat-foot stability shoes (65)",
+          "reason": "Scientifically backed performance claims build trust and are difficult to replicate."
+        },
+        {
+          "title": "Wide-Fit Specialization",
+          "evidence": "Wide-fit sizing compatibility (70)",
+          "reason": "Dominating the niche of wide-fit solutions for flat feet creates a loyal customer base."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Develop Verified Stability Shoes",
+          "reason": "Focus on R&D to create and independently verify true flat-foot stability."
+        },
+        {
+          "title": "Target Wide Flat Feet",
+          "reason": "Launch with a specific product line addressing the 'wide feet plus flat feet overlap' segment."
+        },
+        {
+          "title": "Educate Through Data",
+          "reason": "Publish midsole, heel-counter data, and stability testing results to inform consumers."
+        }
+      ]
+    }
+  }
+}

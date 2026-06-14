@@ -38,6 +38,11 @@ class OpenRouterService:
             self.default_model
         )
 
+        print(
+            "\nMODEL:",
+            model
+        )
+
         headers = {
 
             "Authorization":
@@ -62,6 +67,20 @@ class OpenRouterService:
 
                 {
                     "role":
+                    "system",
+
+                    "content":
+                    (
+                        "You are a JSON API. "
+                        "Return only valid JSON. "
+                        "Do not explain. "
+                        "Do not use markdown. "
+                        "Do not wrap JSON in code fences."
+                    )
+                },
+
+                {
+                    "role":
                     "user",
 
                     "content":
@@ -78,7 +97,7 @@ class OpenRouterService:
 
                 self.url,
 
-                timeout=60,
+                timeout=90,
 
                 headers=headers,
 
@@ -114,7 +133,7 @@ class OpenRouterService:
 
             print(
                 "\nOPENROUTER BODY:\n",
-                response.text[:2000]
+                response.text[:5000]
             )
 
         response.raise_for_status()
@@ -140,11 +159,25 @@ class OpenRouterService:
             debug=debug
         )
 
+        print(
+            "\nRAW RESPONSE:\n"
+        )
+
+        print(
+            response_text[:5000]
+        )
+
         try:
 
-            return json.loads(
+            parsed = json.loads(
                 response_text
             )
+
+            print(
+                "\nJSON PARSE SUCCESS"
+            )
+
+            return parsed
 
         except Exception:
 
@@ -159,11 +192,7 @@ class OpenRouterService:
         if not match:
 
             print(
-                "\nRAW MODEL RESPONSE:\n"
-            )
-
-            print(
-                response_text
+                "\nNO JSON FOUND IN RESPONSE\n"
             )
 
             return {
@@ -175,11 +204,19 @@ class OpenRouterService:
                 response_text
             }
 
+        candidate = match.group()
+
         try:
 
-            return json.loads(
-                match.group()
+            parsed = json.loads(
+                candidate
             )
+
+            print(
+                "\nREGEX JSON PARSE SUCCESS"
+            )
+
+            return parsed
 
         except Exception as e:
 
@@ -188,7 +225,7 @@ class OpenRouterService:
             )
 
             print(
-                match.group()
+                candidate[:5000]
             )
 
             print(
@@ -202,5 +239,5 @@ class OpenRouterService:
                 "invalid_json",
 
                 "raw_response":
-                match.group()
+                candidate
             }

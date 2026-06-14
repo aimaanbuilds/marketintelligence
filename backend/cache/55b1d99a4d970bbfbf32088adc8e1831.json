@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-06-14T22:47:19.324982",
+  "result": {
+    "meta": {
+      "topic": "string toys",
+      "cached": false,
+      "generated_at": "2026-06-14T22:47:19.324939",
+      "intelligence_time": 34.41,
+      "synthesis_time": 21.95,
+      "total_time": 56.36
+    },
+    "signals": {
+      "virality": {
+        "momentum": 18,
+        "trend_growth": 36.23,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 85.7,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 36.23,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 131,
+        "comment_volume": 4193
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 5
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 45,
+      "opportunity_score": 0,
+      "build_recommendation": {
+        "decision": "No",
+        "reason": "Extreme competition and no detected market opportunity make entry highly unviable."
+      },
+      "confidence": 70,
+      "confidence_explanation": "Key signals like competitive intensity and customer activity are present, but a significant lack of market definition, customer segments, and specific opportunities limits comprehensive analysis.",
+      "top_reason_to_build": "No compelling reason identified due to zero detected opportunity.",
+      "biggest_risk": "Extreme competitive intensity and market saturation.",
+      "best_customer_segment": "Undetermined due to missing data.",
+      "best_moat": "Community and network effects, leveraging high customer engagement.",
+      "executive_summary": "The string toy market exhibits high customer engagement and moderate trend growth, but faces extreme competitive intensity. With no identified market opportunity and significant existing competition, entering this saturated market is highly unattractive for a new startup.",
+      "why_now": [
+        {
+          "title": "High Customer Engagement",
+          "evidence": "Discussion volume: 131, Comment volume: 4193.",
+          "reason": "Indicates an active and interested user base for string toys."
+        },
+        {
+          "title": "Moderate Trend Growth",
+          "evidence": "Trend growth: 36.23.",
+          "reason": "Suggests the market is expanding at a reasonable pace."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Engaged User Base",
+          "evidence": "Discussion volume: 131, Comment volume: 4193.",
+          "reason": "Potential for community-driven product development or platform."
+        },
+        {
+          "title": "Market Growth",
+          "evidence": "Growth score: 36.23.",
+          "reason": "Indicates some level of market expansion is occurring."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Extreme Competition",
+          "evidence": "Competition score: 100.",
+          "reason": "The market is highly saturated and difficult for new entrants."
+        },
+        {
+          "title": "High Competitive Activity",
+          "evidence": "Launches: 20, Avg votes per day: 85.7.",
+          "reason": "Many new products are entering, with strong engagement on existing ones."
+        },
+        {
+          "title": "No Detected Opportunity",
+          "evidence": "Opportunity score: 0.",
+          "reason": "No clear market gap or unmet need has been identified by analysis."
+        }
+      ],
+      "recommended_customer": "Undetermined due to missing data.",
+      "recommended_positioning": "Undetermined due to missing data regarding gaps or differentiators.",
+      "potential_moats": [
+        {
+          "title": "Community & Network Effects",
+          "evidence": "Discussion volume: 131, Comment volume: 4193.",
+          "reason": "High customer engagement can be leveraged to build a loyal community."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Deep Community Engagement",
+          "reason": "Cultivate a highly active user base through forums and content to build loyalty."
+        }
+      ]
+    }
+  }
+}

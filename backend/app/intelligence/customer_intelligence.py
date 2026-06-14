@@ -1,5 +1,3 @@
-import json
-
 from app.services.openrouter_service import (
     OpenRouterService
 )
@@ -10,6 +8,40 @@ def extract_customer_intelligence(
     evidence,
     signals
 ):
+    customer_evidence = [
+
+        {
+            "title":
+            item.get(
+                "title",
+                ""
+            ),
+
+            "snippet":
+            item.get(
+                "snippet",
+                ""
+            )
+        }
+
+        for item in evidence
+
+    ][:10]
+
+    customer_context = {
+
+        "customer":
+        signals.get(
+            "customer",
+            {}
+        ),
+
+        "virality":
+        signals.get(
+            "virality",
+            {}
+        )
+    }
 
     prompt = f"""
 You are a customer research analyst.
@@ -18,14 +50,12 @@ Topic:
 {topic}
 
 Signals:
-{signals}
+{customer_context}
 
 Evidence:
-{evidence}
+{customer_evidence}
 
 Base conclusions ONLY on provided evidence.
-
-Return ONLY valid JSON.
 
 Definitions:
 
@@ -44,53 +74,39 @@ An observable behavior, habit, or decision-making pattern.
 Opportunity Area:
 An underserved customer need, emerging trend, or market gap.
 
-Customer segments MUST:
-
-- Be actual groups of people.
-- Never be market concepts.
-- Never be trends.
-- Never be opportunity areas.
-- Be written as buyer personas.
-
-BAD:
-- Market Opportunity
-- AI Trend
-- Growth Segment
-
-GOOD:
-- Weight-loss seekers
-- Busy professionals
-- Fitness enthusiasts
-- People replacing dietitians with AI
-
-For every segment ask:
-"Would this describe a real person?"
-If not, reject it.
-
 Rules:
 
 - Base conclusions ONLY on provided evidence.
 - Do not invent facts.
-- Pain points must be actual problems.
+- Customer segments must be actual groups of people.
+- Pain points must be real problems.
 - Desired outcomes must be customer goals.
-- Customer segments must be specific, not generic.
-- Return the highest-confidence insights first.
-- Scores must be 0-100
-- Return 5-10 items per category
-- Rank highest scoring items first
-- No explanations outside JSON
+- Behavior patterns must be observable.
+- Opportunity areas must be grounded in evidence.
+- Rank strongest insights first.
+- Return ONLY valid JSON.
+
+Confidence Rules:
+
+1 source:
+max confidence = 50
+
+2-3 sources:
+max confidence = 75
+
+4+ sources:
+max confidence = 90
+
+No evidence:
+confidence = 0
 
 Schema:
 
 {{
-    "customer_segments": [
+  "customer_segments": [
     {{
-     "name": "Weight-loss seekers",
-     "score": 95
-  }},
-  {{
-      "name": "Busy professionals",
-      "score": 80
+      "name": "",
+      "score": 0
     }}
   ],
 
@@ -125,17 +141,38 @@ Schema:
 
 Additional Requirements:
 
-- Return at least 5 items when evidence supports it.
-- Use concise names (3-8 words).
-- Avoid generic segments like "everyone" or "health-conscious users" unless strongly supported by evidence.
-- Rank by confidence and importance.
-- Output valid JSON only.
+- Return 5-10 items per category when evidence supports it.
+- Use concise names.
+- Rank highest-confidence items first.
+
+CRITICAL JSON RULES:
+
+- Every score MUST be an integer.
+- Every numeric field MUST be a valid JSON number.
+- All scores must be between 0 and 100.
+
+VALID:
+60
+
+INVALID:
+"60"
+sixty
+high
+medium
+
+Output valid JSON only.
 """
 
-    service = OpenRouterService()
+    print("CALLING CUSTOMER OPENROUTER")
 
     service = OpenRouterService()
 
-    return service.call_json(
-        prompt
+    result = service.call_json(
+    prompt,
+    debug=True
 )
+
+    print("\nFINAL RESULT:")
+    print(result)
+
+    return result

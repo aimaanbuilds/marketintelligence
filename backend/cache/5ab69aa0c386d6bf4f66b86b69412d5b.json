@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-06-14T22:41:03.863412",
+  "result": {
+    "meta": {
+      "topic": "cat heels",
+      "cached": false,
+      "generated_at": "2026-06-14T22:41:03.863331",
+      "intelligence_time": 34.96,
+      "synthesis_time": 20.83,
+      "total_time": 55.79
+    },
+    "signals": {
+      "virality": {
+        "momentum": 28,
+        "trend_growth": 57.18,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 85.65,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 57.18,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 121,
+        "comment_volume": 1569
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 2
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 0,
+      "opportunity_score": 0,
+      "build_recommendation": {
+        "decision": "No",
+        "reason": "Market shows overwhelming competition and zero detected opportunity."
+      },
+      "confidence": 85,
+      "confidence_explanation": "A competition score of 100 and an opportunity score of 0 provide strong, unambiguous signals against market entry.",
+      "top_reason_to_build": "No compelling reason identified.",
+      "biggest_risk": "Extreme market saturation and competitive intensity.",
+      "best_customer_segment": "Not detected",
+      "best_moat": "Not explicitly identified",
+      "executive_summary": "The 'cat heels' market is highly competitive with numerous launches and intense rivalry. Despite some customer discussion, no clear market opportunity has been identified. Entering this market is not recommended due to significant risks.",
+      "why_now": [
+        {
+          "title": "Growing Trend",
+          "evidence": "Trend growth: 57.18",
+          "reason": "The market shows a notable positive trend in growth."
+        },
+        {
+          "title": "Customer Interest",
+          "evidence": "Discussion volume: 121, Comment volume: 1569",
+          "reason": "High customer engagement indicates existing interest in the topic."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Engaged Customer Base",
+          "evidence": "Discussion volume: 121, Comment volume: 1569",
+          "reason": "High customer interaction suggests potential for community building or niche product development."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Extreme Competition",
+          "evidence": "Competition score: 100",
+          "reason": "The market is saturated with intense competitive forces."
+        },
+        {
+          "title": "Numerous New Launches",
+          "evidence": "Launches: 20",
+          "reason": "Many recent product launches signify a crowded and difficult market."
+        },
+        {
+          "title": "No Market Opportunity",
+          "evidence": "Opportunity score: 0",
+          "reason": "No clear or viable market gaps or needs were identified."
+        }
+      ],
+      "recommended_customer": "Not detected",
+      "recommended_positioning": "Not detected",
+      "potential_moats": [
+        {
+          "title": "Strong Brand Loyalty",
+          "evidence": "Customer discussion volume: 121, comment volume: 1569",
+          "reason": "Cultivating a strong brand could capture customer interest and foster repeat business."
+        },
+        {
+          "title": "Proprietary Design/Tech",
+          "evidence": "Top differentiators: []",
+          "reason": "Unique product innovation or technology could create a competitive barrier."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Hyper-Niche Focus",
+          "reason": "Targeting a very specific sub-segment to avoid direct competition."
+        },
+        {
+          "title": "Community-Led Growth",
+          "reason": "Leveraging high customer discussion to build a loyal user base."
+        }
+      ]
+    }
+  }
+}

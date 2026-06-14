@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-06-14T22:10:43.063433",
+  "result": {
+    "meta": {
+      "topic": "vegan protein products",
+      "cached": false,
+      "generated_at": "2026-06-14T22:10:43.063377",
+      "intelligence_time": 34.58,
+      "synthesis_time": 33.46,
+      "total_time": 68.04
+    },
+    "signals": {
+      "virality": {
+        "momentum": 16,
+        "trend_growth": 32.77,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 85.05,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 32.77,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 131,
+        "comment_volume": 9207
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 9
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 70,
+      "opportunity_score": 35,
+      "build_recommendation": {
+        "decision": "Monitor",
+        "reason": "Fierce competition and moderate growth make direct entry challenging without clear differentiation."
+      },
+      "confidence": 55,
+      "confidence_explanation": "Confidence is moderate due to the absence of specific strategic details like top segments, pain points, white space, and differentiators, despite clear quantitative signals.",
+      "top_reason_to_build": "Strong customer interest presents potential for differentiated solutions.",
+      "biggest_risk": "Extreme competitive intensity.",
+      "best_customer_segment": "",
+      "best_moat": "Strong brand and loyal community built on deep insights.",
+      "executive_summary": "The vegan protein products market shows strong customer demand but suffers from extremely high competition and only moderate growth. A startup should closely monitor this market, as successful entry requires significant differentiation to navigate the crowded landscape. Building a defensible position is critical for any potential entry.",
+      "why_now": [
+        {
+          "title": "Strong Customer Demand",
+          "evidence": "discussion_volume (131), comment_volume (9207)",
+          "reason": "High discussion and comment volumes indicate an active and engaged user base with interest."
+        },
+        {
+          "title": "Moderate Market Growth",
+          "evidence": "growth_score (32.77), trend_growth (32.77)",
+          "reason": "Consistent, albeit not explosive, growth suggests an expanding market, sustaining interest."
+        },
+        {
+          "title": "Increasing Market Visibility",
+          "evidence": "market_reports (9)",
+          "reason": "Growing number of market reports signals increasing industry interest and data availability."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Address Unmet Customer Needs",
+          "evidence": "discussion_volume (131), comment_volume (9207)",
+          "reason": "High customer interaction suggests unaddressed needs or desire for improved, differentiated solutions."
+        },
+        {
+          "title": "Leverage Market Insights",
+          "evidence": "market_reports (9)",
+          "reason": "Existing market reports can provide valuable data for strategic planning and niche identification."
+        },
+        {
+          "title": "Innovation in Product Offerings",
+          "evidence": "competition_score (100), comment_volume (9207)",
+          "reason": "High competition provides incentive for superior, differentiated products to capture market share."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Extreme Competitive Intensity",
+          "evidence": "competition_score (100)",
+          "reason": "A saturated market makes customer acquisition and retention exceptionally difficult for new entrants."
+        },
+        {
+          "title": "Lack of Clear Differentiation",
+          "evidence": "top_positioning_gaps (empty), top_white_space (empty)",
+          "reason": "Without identified gaps, creating a unique and defensible value proposition is challenging and risky."
+        },
+        {
+          "title": "Moderate Growth in Crowded Market",
+          "evidence": "growth_score (32.77), competition_score (100)",
+          "reason": "Moderate growth combined with high competition limits potential for rapid scale without significant capital."
+        }
+      ],
+      "recommended_customer": "",
+      "recommended_positioning": "",
+      "potential_moats": [
+        {
+          "title": "Strong Brand & Community",
+          "evidence": "discussion_volume (131), comment_volume (9207)",
+          "reason": "High customer engagement can be leveraged to build a loyal community and foster brand advocacy."
+        },
+        {
+          "title": "Deep Customer Insight",
+          "evidence": "discussion_volume (131), comment_volume (9207)",
+          "reason": "Analyzing extensive conversations can uncover specific unmet needs to build tailored, superior solutions."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Conduct Detailed Customer Research",
+          "reason": "Leverage high customer discussion and comment volumes to identify specific pain points and unmet needs."
+        },
+        {
+          "title": "Identify Niche Opportunities",
+          "reason": "In a highly competitive market, focus on underserved sub-segments to build a defensible position."
+        },
+        {
+          "title": "Monitor Competitor Activities",
+          "reason": "Track competitor launches and strategies closely to inform differentiation and market entry tactics."
+        }
+      ]
+    }
+  }
+}

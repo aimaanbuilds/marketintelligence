@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-06-14T22:31:12.807641",
+  "result": {
+    "meta": {
+      "topic": "vegan leather bags",
+      "cached": false,
+      "generated_at": "2026-06-14T22:31:12.807600",
+      "intelligence_time": 36.18,
+      "synthesis_time": 32.87,
+      "total_time": 69.05
+    },
+    "signals": {
+      "virality": {
+        "momentum": 20,
+        "trend_growth": 40.32,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 85.45,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 40.32,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 136,
+        "comment_volume": 4335
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 2
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 40,
+      "opportunity_score": 0,
+      "build_recommendation": {
+        "decision": "Monitor",
+        "reason": "High competition and no explicit opportunity detected."
+      },
+      "confidence": 65,
+      "confidence_explanation": "Market shows strong customer interest but faces extremely high competition and no detected explicit opportunity for new entry.",
+      "top_reason_to_build": "Strong customer engagement",
+      "biggest_risk": "Extreme market competition",
+      "best_customer_segment": "",
+      "best_moat": "Brand and community loyalty",
+      "executive_summary": "The vegan leather bags market exhibits strong customer engagement but faces extremely high competition and lacks clear detected new opportunities. Despite moderate growth trends, entering this crowded space with low startup activity presents significant challenges for differentiation. A 'Monitor' recommendation allows for observation of emerging white spaces before committing resources.",
+      "why_now": [
+        {
+          "title": "Sustained Customer Interest",
+          "evidence": "customer.comment_volume: 4335",
+          "reason": "High customer engagement shows strong current demand."
+        },
+        {
+          "title": "Moderate Trend Growth",
+          "evidence": "signals.virality.trend_growth: 40.32",
+          "reason": "Market trend indicates ongoing, steady interest."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Cultivate Engaged Community",
+          "evidence": "customer.comment_volume: 4335",
+          "reason": "Leverage high customer interaction for loyalty."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Intense Market Competition",
+          "evidence": "competitive.competition_score: 100",
+          "reason": "High competition makes market entry and growth challenging."
+        },
+        {
+          "title": "Undefined Opportunity",
+          "evidence": "market_opportunity.opportunity_score: 0",
+          "reason": "System detected no explicit market opportunity."
+        },
+        {
+          "title": "Lack of Clear Differentiation",
+          "evidence": "top_differentiators: []",
+          "reason": "Absence of distinct differentiators makes standing out hard."
+        }
+      ],
+      "recommended_customer": "",
+      "recommended_positioning": "",
+      "potential_moats": [
+        {
+          "title": "Brand and Community Loyalty",
+          "evidence": "customer.comment_volume: 4335",
+          "reason": "Building a strong brand around highly engaged customers."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Foster customer communities online.",
+          "reason": "Capitalize on high comment_volume for loyalty."
+        },
+        {
+          "title": "Analyze competitor product engagement.",
+          "reason": "Learn from high avg_votes_per_day on competing products."
+        },
+        {
+          "title": "Deep dive into customer discussions.",
+          "reason": "Understand nuances within discussion_volume 136."
+        }
+      ]
+    }
+  }
+}

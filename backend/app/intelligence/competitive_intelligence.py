@@ -9,24 +9,41 @@ def extract_competitive_intelligence(
     signals,
     known_competitors=None
 ):
-    
+
     known_competitors = (
-    known_competitors
-    or
-    []
-)
+        known_competitors
+        or
+        []
+    )
+
     competitive_evidence = [
 
-    item
+        {
+            "title":
+            item.get(
+                "title",
+                ""
+            ),
 
-    for item in evidence
+            "snippet":
+            item.get(
+                "snippet",
+                ""
+            )
+        }
 
-    if item.get("source") in [
+        for item in evidence
 
-        "producthunt",
-        "ddgs"
-    ]
-]
+    ][:10]
+
+    competitive_context = {
+
+        "competitive":
+        signals.get(
+            "competitive",
+            {}
+        )
+    }
 
     prompt = f"""
 You are a senior competitive intelligence analyst.
@@ -35,7 +52,7 @@ Topic:
 {topic}
 
 Signals:
-{signals}
+{competitive_context}
 
 Known Competitors:
 {known_competitors}
@@ -51,19 +68,13 @@ Your job is to identify:
 4. White space opportunities
 5. Differentiation opportunities
 
- 
-
 Definitions:
 
 Competitor:
-A company, product, or solution solving the same or a similar problem.
-- Use known competitors whenever relevant.
-- Do not invent competitors if known competitors are provided.
-- Identify gaps in their positioning.
-- Identify unmet customer needs they do not serve well.
+A company, product, or solution solving the same problem.
 
 Competitive Threat:
-Something that makes the market harder to enter or win.
+Something that makes the market harder to enter.
 
 Positioning Gap:
 A customer need competitors are not serving well.
@@ -72,19 +83,30 @@ White Space Opportunity:
 An underserved market area with strong potential.
 
 Differentiation Opportunity:
-A way the product could stand apart from competitors.
+A way to stand apart from competitors.
 
 Rules:
 
 - Base conclusions ONLY on provided evidence.
+- Use known competitors when relevant.
 - Do not invent competitors.
-- If evidence is weak, lower confidence.
+- Ignore unrelated evidence.
 - Rank strongest insights first.
-- Scores must be between 0 and 100.
 - Return ONLY valid JSON.
--Ignore evidence that solves a fundamentally different problem than the topic.
 
-Schema:
+Confidence Rules:
+
+1 source:
+max confidence = 50
+
+2-3 sources:
+max confidence = 75
+
+4+ sources:
+max confidence = 90
+
+No evidence:
+confidence = 0
 
 Schema:
 
@@ -127,17 +149,38 @@ Schema:
 
 Additional Requirements:
 
-- Return a maximum of 5 items per category.
+- Maximum 5 items per category.
 - Use concise names.
 - Rank highest-confidence items first.
-- Output valid JSON only.
+
+CRITICAL JSON RULES:
+
+- Every score MUST be an integer.
+- Every numeric field MUST be a valid JSON number.
+- All scores must be between 0 and 100.
+
+VALID:
+60
+
+INVALID:
+"60"
+sixty
+high
+medium
+
+Output valid JSON only.
 """
 
-    service = OpenRouterService()
-    
+    print("CALLING COMPETITIVE OPENROUTER")
 
-    return service.call_json(
-        prompt,
-        debug=False
-    )
-    
+    service = OpenRouterService()
+
+    result = service.call_json(
+    prompt,
+    debug=True
+)
+
+    print("\nFINAL RESULT:")
+    print(result)
+
+    return result

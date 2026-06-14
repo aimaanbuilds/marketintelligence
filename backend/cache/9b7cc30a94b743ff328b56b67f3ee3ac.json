@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-06-14T23:18:12.606226",
+  "result": {
+    "meta": {
+      "topic": "dresses for dolls",
+      "cached": false,
+      "generated_at": "2026-06-14T23:18:12.606192",
+      "intelligence_time": 32.66,
+      "synthesis_time": 26.04,
+      "total_time": 58.7
+    },
+    "signals": {
+      "virality": {
+        "momentum": 15,
+        "trend_growth": 30.94,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 86.25,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 30.94,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 123,
+        "comment_volume": 8471
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 0
+      }
+    },
+    "intelligence": {
+      "customer": {
+        "test": "customer works"
+      },
+      "market": {
+        "test": "market works"
+      },
+      "competitive": {
+        "test": "competitive works"
+      }
+    },
+    "synthesis": {
+      "market_pulse": 50,
+      "opportunity_score": 50,
+      "build_recommendation": {
+        "decision": "Monitor",
+        "reason": "Intense competition and low virality momentum outweigh moderate growth and high customer engagement, making broad entry risky."
+      },
+      "confidence": 70,
+      "confidence_explanation": "Good signal data on competition and customer engagement, but critical strategic details like segments, pain points, and differentiators are absent.",
+      "top_reason_to_build": "High customer comment volume indicates active engagement and demand.",
+      "biggest_risk": "Extremely high competition with a score of 100 and 20 recent launches.",
+      "best_customer_segment": "Unidentified",
+      "best_moat": "Community & Network Effects",
+      "executive_summary": "The market for doll dresses shows significant customer engagement but faces extremely high competition and low virality momentum. While some growth exists, the lack of identified white space or differentiators makes broad market entry highly risky. A cautious 'Monitor' approach is recommended.",
+      "why_now": [
+        {
+          "title": "High Competition",
+          "evidence": "competitive.competition_score: 100",
+          "reason": "The market is saturated, making it difficult for new entrants to gain traction."
+        },
+        {
+          "title": "Low Virality Momentum",
+          "evidence": "virality.momentum: 15",
+          "reason": "Trends lack strong upward acceleration, reducing organic discovery."
+        },
+        {
+          "title": "Moderate Trend Growth",
+          "evidence": "virality.trend_growth: 30.94",
+          "reason": "Growth exists, but it is not indicative of an explosive market timing."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "High Customer Engagement",
+          "evidence": "customer.comment_volume: 8471",
+          "reason": "An active community indicates strong underlying demand and interest."
+        },
+        {
+          "title": "Moderate Market Growth",
+          "evidence": "market.growth_score: 30.94",
+          "reason": "The market is expanding, offering potential for niche market capture."
+        },
+        {
+          "title": "Active Discussions",
+          "evidence": "customer.discussion_volume: 123",
+          "reason": "Discussions suggest opportunities to cater to specific community needs."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Intense Competition",
+          "evidence": "competitive.competition_score: 100",
+          "reason": "Dominant players and numerous launches make market penetration challenging."
+        },
+        {
+          "title": "Low Virality",
+          "evidence": "virality.momentum: 15",
+          "reason": "Products may struggle to gain organic traction and widespread attention."
+        },
+        {
+          "title": "Lack of Strategic Data",
+          "evidence": "top_segments: []",
+          "reason": "Absence of identified customer segments or pain points hinders targeted strategy."
+        }
+      ],
+      "recommended_customer": "Unidentified",
+      "recommended_positioning": "Undetermined; requires further research to identify unique value propositions in a crowded market.",
+      "potential_moats": [
+        {
+          "title": "Community & Network Effects",
+          "evidence": "customer.comment_volume: 8471",
+          "reason": "Building a vibrant community can foster loyalty and switching costs."
+        },
+        {
+          "title": "Brand Loyalty",
+          "evidence": "customer.comment_volume: 8471",
+          "reason": "Strong engagement can lead to a trusted brand with dedicated customers."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Deep Dive into Customer Discussions",
+          "reason": "Uncover specific unmet needs and pain points within the doll enthusiast community to inform niche product development."
+        },
+        {
+          "title": "Foster Community Engagement",
+          "reason": "Build loyalty and a strong user base by actively engaging with customers and providing platforms for interaction."
+        },
+        {
+          "title": "Monitor Emerging Trends Closely",
+          "reason": "Identify specific growth niches within the broader market to position offerings strategically against high competition."
+        }
+      ]
+    }
+  }
+}

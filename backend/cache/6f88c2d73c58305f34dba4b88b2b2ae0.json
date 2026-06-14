@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-06-14T22:00:29.770978",
+  "result": {
+    "meta": {
+      "topic": "ai wardrobe planner",
+      "cached": false,
+      "generated_at": "2026-06-14T22:00:29.770944",
+      "intelligence_time": 35.16,
+      "synthesis_time": 38.69,
+      "total_time": 73.85
+    },
+    "signals": {
+      "virality": {
+        "momentum": 28,
+        "trend_growth": 57.18,
+        "avg_views_per_day": 0.0,
+        "avg_engagement_rate": 0.0
+      },
+      "competitive": {
+        "launches": 20,
+        "avg_votes_per_day": 84.45,
+        "competition_score": 100
+      },
+      "market": {
+        "growth_score": 57.18,
+        "startup_activity": 20
+      },
+      "customer": {
+        "discussion_volume": 115,
+        "comment_volume": 275
+      },
+      "market_opportunity": {
+        "market_size_mentions": 0,
+        "growth_mentions": 0,
+        "forecast_mentions": 0,
+        "cagr_mentions": 0,
+        "billion_mentions": 0,
+        "million_mentions": 0,
+        "detected_market_sizes": [],
+        "detected_growth_rates": [],
+        "opportunity_score": 0
+      },
+      "market_size": {
+        "market_reports": 0
+      }
+    },
+    "intelligence": {
+      "customer": {},
+      "market": {},
+      "competitive": {}
+    },
+    "synthesis": {
+      "market_pulse": 53,
+      "opportunity_score": 0,
+      "build_recommendation": {
+        "decision": "Monitor",
+        "reason": "Intense competition and zero explicit opportunity score, despite customer interest."
+      },
+      "confidence": 55,
+      "confidence_explanation": "Strong customer interest and market growth are offset by extremely high competition and an explicitly low opportunity score.",
+      "top_reason_to_build": "Strong customer interest indicated by high discussion and comment volumes.",
+      "biggest_risk": "Intense competition from existing solutions.",
+      "best_customer_segment": "",
+      "best_moat": "Proprietary AI and data network effects.",
+      "executive_summary": "The AI wardrobe planner market exhibits strong customer engagement and growth potential, yet faces extremely high competition. A low explicit opportunity score necessitates a cautious approach. Differentiation and niche targeting are critical for any potential entry.",
+      "why_now": [
+        {
+          "title": "High Customer Interest",
+          "evidence": "customer.discussion_volume: 115",
+          "reason": "Active user discussions indicate clear demand."
+        },
+        {
+          "title": "Market Growth Trend",
+          "evidence": "market.growth_score: 57.18",
+          "reason": "The market shows consistent growth and increasing relevance."
+        },
+        {
+          "title": "Emerging Momentum",
+          "evidence": "virality.momentum: 28",
+          "reason": "The trend is gaining some traction, suggesting rising awareness."
+        }
+      ],
+      "key_opportunities": [
+        {
+          "title": "Strong Customer Engagement",
+          "evidence": "customer.comment_volume: 275",
+          "reason": "High comment volume suggests willingness to interact and provide feedback."
+        },
+        {
+          "title": "Sustained Market Expansion",
+          "evidence": "trend_growth: 57.18",
+          "reason": "A growing market provides more potential users over time."
+        },
+        {
+          "title": "Potential Unmet Needs",
+          "evidence": "customer.discussion_volume: 115",
+          "reason": "High discussion volume implies underlying user problems to solve."
+        }
+      ],
+      "key_risks": [
+        {
+          "title": "Extreme Competition",
+          "evidence": "competitive.competition_score: 100",
+          "reason": "The market is saturated with existing solutions."
+        },
+        {
+          "title": "Low Startup Interest",
+          "evidence": "market.startup_activity: 20",
+          "reason": "Few new entrants may indicate market difficulties or limited runway."
+        },
+        {
+          "title": "Uncertain Market Opportunity",
+          "evidence": "market_opportunity.opportunity_score: 0",
+          "reason": "Explicitly no strong opportunity detected from market data."
+        }
+      ],
+      "recommended_customer": "",
+      "recommended_positioning": "Differentiation through unique value proposition.",
+      "potential_moats": [
+        {
+          "title": "Proprietary AI/Algorithms",
+          "evidence": "Topic is \"ai wardrobe planner\".",
+          "reason": "Advanced AI for personalized styling creates a unique, hard-to-replicate solution."
+        },
+        {
+          "title": "Data Network Effects",
+          "evidence": "Topic is \"ai wardrobe planner\".",
+          "reason": "User data on wardrobe and preferences improves AI, building a defensible asset."
+        },
+        {
+          "title": "Strong Brand & Community",
+          "evidence": "customer.discussion_volume: 115",
+          "reason": "Building a loyal community fosters stickiness and reduces churn."
+        }
+      ],
+      "execution_ideas": [
+        {
+          "title": "Niche Focus",
+          "reason": "High competition (100) necessitates targeting a specific, underserved user group."
+        },
+        {
+          "title": "Deep Personalization",
+          "reason": "Leverage AI to offer highly tailored styling and planning."
+        },
+        {
+          "title": "Community Building",
+          "reason": "Capitalize on existing customer interest to foster loyalty and user-generated content."
+        }
+      ]
+    }
+  }
+}
